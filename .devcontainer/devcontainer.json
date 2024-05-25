@@ -1,0 +1,5 @@
+{
+	"name": "Alpine",
+	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.19",
+	"postCreateCommand": "git config --global user.email 'steve.delperdang@gmail.com'; git config --global user.name 'delperdang'"
+}
