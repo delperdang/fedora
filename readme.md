@@ -20,12 +20,12 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 sudo dnf groupupdate sound-and-video -y
 sudo dnf install apr apr-util -y
 ```
-### download and unzip the latest davinci resolve from here: https://www.blackmagicdesign.com/products/davinciresolve
+#### download and unzip the latest davinci resolve from [here](https://www.blackmagicdesign.com/products/davinciresolve)
 ```
 cd ~/Downloads/DaVinci_Resolve_19.0b3_Linux
-SKIP_PACKAGE_CHECK=1 ./DaVinci_Resolve_19.0b3_Linux.run
+SKIP_PACKAGE_CHECK=1 ./DaVinci_Resolve_*
 ```
-### after going through the installer run the following
+#### go through the installer
 ```
 cd /opt/resolve/libs
 sudo mkdir disabled-libraries
@@ -49,11 +49,20 @@ sudo dnf remove docker \
                   docker-engine -y
 sudo dnf -y install dnf-plugins-core -y
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo -y
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y
 sudo systemctl enable docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo shutdown -r now
+```
+#### connect the Elements external drive and set it to automount
+```
+cd /run/media/reguser/Elements/code/bedrock
+./scripts/startup.sh
+cd /run/media/reguser/Elements/code/jellyfin
+./scripts/startup.sh
+cd /run/media/reguser/Elements/code/lexcredendi
+./scripts/startup.sh
 ```
 
 # chrome
@@ -73,7 +82,18 @@ sudo dnf install code -y
 
 # vlc
 ```
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install vlc -y
 ```
+
+# steam
+```
+sudo dnf config-manager --enable fedora-cisco-openh264 -y
+sudo dnf install steam -y
+```
+#### download the latest release of proton ge [here](https://github.com/GloriousEggroll/proton-ge-custom/releases)
+```
+mkdir ~/.steam/root/compatibilitytools.d
+cd ~/Downloads
+tar -xf GE-Proton*.tar.gz -C ~/.steam/root/compatibilitytools.d/
+```
+#### restart steam
