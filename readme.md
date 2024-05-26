@@ -55,12 +55,6 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo shutdown -r now
 ```
-#### download the latest docker desktop from [here](https://docs.docker.com/desktop/install/fedora/)
-```
-cd ~/Downloads
-sudo dnf install ./docker-desktop-* -y
-docker context use desktop-linux
-```
 #### mount the Elements external drive at /mnt/Elements
 ```
 cd /mnt/Elements/code/bedrock
