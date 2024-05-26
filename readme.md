@@ -96,4 +96,19 @@ mkdir ~/.steam/root/compatibilitytools.d
 cd ~/Downloads
 tar -xf GE-Proton*.tar.gz -C ~/.steam/root/compatibilitytools.d/
 ```
-#### restart steam
+### experimental trix
+#### create a shaders directory
+```
+mkdir ~/shaders
+```
+#### add the following lines to ~/.bashrc
+```
+export __GL_THREADED_OPTIMIZATION=1
+export __GL_SHADER_DISK_CACHE=1
+export __GL_SHADER_DISK_CACHE_PATH=~/shaders
+```
+#### install winetricks and protontricks
+```
+sudo dnf install winetricks -y
+sudo dnf install protontricks -y
+```
