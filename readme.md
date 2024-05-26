@@ -55,7 +55,11 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo shutdown -r now
 ```
-#### mount the Elements external drive at /mnt/Elements
+#### add the following line to /etc/fstab and restart
+```
+/dev/disk/by-id/wwn-0x50014ee26ad4bf44-part1 /mnt/Elements auto nosuid,nodev,nofail,x-gvfs-show 0 0
+```
+#### start all docker containers by startup script
 ```
 cd /mnt/Elements/code/bedrock
 ./scripts/startup.sh
