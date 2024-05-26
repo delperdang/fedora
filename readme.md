@@ -47,7 +47,7 @@ sudo dnf remove docker \
                   docker-selinux \
                   docker-engine-selinux \
                   docker-engine -y
-sudo dnf -y install dnf-plugins-core -y
+sudo dnf install dnf-plugins-core -y
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo -y
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y
 sudo systemctl enable docker
@@ -55,13 +55,19 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo shutdown -r now
 ```
-#### connect the Elements external drive and set it to automount
+#### download the latest docker desktop from [here](https://docs.docker.com/desktop/install/fedora/)
 ```
-cd /run/media/reguser/Elements/code/bedrock
+cd ~/Downloads
+sudo dnf install ./docker-desktop-* -y
+docker context use desktop-linux
+```
+#### mount the Elements external drive at /mnt/Elements
+```
+cd /mnt/Elements/code/bedrock
 ./scripts/startup.sh
-cd /run/media/reguser/Elements/code/jellyfin
+cd /mnt/Elements/code/jellyfin
 ./scripts/startup.sh
-cd /run/media/reguser/Elements/code/lexcredendi
+cd /mnt/Elements/code/lexcredendi
 ./scripts/startup.sh
 ```
 
