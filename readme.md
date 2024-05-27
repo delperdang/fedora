@@ -3,6 +3,7 @@
 sudo dnf upgrade -y
 sudo shutdown -r now
 ```
+
 # nvidia
 ```
 sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig -y
@@ -12,6 +13,13 @@ sudo dnf makecache -y
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
 sudo shutdown -r now
 ```
+# x11
+```
+sudo dnf install plasma-workspace-x11 kwin-x11 -y
+sudo shutdown -r now
+```
+#### in the bottom left of the login screen select x11
+
 # davinci
 ```
 sudo dnf install libxcrypt-compat libcurl libcurl-devel mesa-libGLU -y
