@@ -13,35 +13,13 @@ sudo dnf makecache -y
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
 sudo shutdown -r now
 ```
+
 # x11
 ```
 sudo dnf install plasma-workspace-x11 kwin-x11 -y
 sudo shutdown -r now
 ```
-#### in the bottom left of the login screen select x11
-
-# davinci
-```
-sudo dnf install libxcrypt-compat libcurl libcurl-devel mesa-libGLU -y
-sudo dnf update -y
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
-sudo dnf groupupdate sound-and-video -y
-sudo dnf install apr apr-util -y
-```
-#### download and unzip the latest davinci resolve from [here](https://www.blackmagicdesign.com/products/davinciresolve)
-```
-cd ~/Downloads/DaVinci_Resolve_19.0b3_Linux
-SKIP_PACKAGE_CHECK=1 ./DaVinci_Resolve_*
-```
-#### go through the installer
-```
-cd /opt/resolve/libs
-sudo mkdir disabled-libraries
-sudo mv libglib* disabled-libraries
-sudo mv libgio* disabled-libraries
-sudo mv libgmodule* disabled-libraries
-sudo shutdown -r now
-```
+in the bottom left of the login screen select x11
 
 # docker
 ```
@@ -63,11 +41,11 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo shutdown -r now
 ```
-#### add the following line to /etc/fstab and restart
+add the following line to /etc/fstab and restart
 ```
 /dev/disk/by-id/wwn-0x50014ee26ad4bf44-part1 /mnt/Elements auto nosuid,nodev,nofail,x-gvfs-show 0 0
 ```
-#### start all docker containers by startup script
+start all docker containers by startup script
 ```
 cd /mnt/Elements/code/bedrock
 ./scripts/startup.sh
@@ -92,35 +70,40 @@ sudo dnf check-update -y
 sudo dnf install code -y
 ```
 
-# vlc
-```
-sudo dnf install vlc -y
-```
-
 # steam
 ```
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
 sudo dnf install steam -y
 ```
-#### download the latest release of proton ge [here](https://github.com/GloriousEggroll/proton-ge-custom/releases)
+download the latest release of proton ge [here](https://github.com/GloriousEggroll/proton-ge-custom/releases)
 ```
 mkdir ~/.steam/root/compatibilitytools.d
 cd ~/Downloads
 tar -xf GE-Proton*.tar.gz -C ~/.steam/root/compatibilitytools.d/
 ```
-### experimental trix
-#### create a shaders directory
+create a shaders directory
 ```
 mkdir ~/shaders
 ```
-#### add the following lines to ~/.bashrc
+add the following lines to ~/.bashrc
 ```
 export __GL_THREADED_OPTIMIZATION=1
 export __GL_SHADER_DISK_CACHE=1
 export __GL_SHADER_DISK_CACHE_PATH=~/shaders
 ```
-#### install winetricks and protontricks
+install winetricks and protontricks
 ```
 sudo dnf install winetricks -y
 sudo dnf install protontricks -y
 ```
+
+# vlc
+```
+sudo dnf install vlc -y
+```
+
+# shotcut
+```
+mkdir ~/shotcut
+```
+download the shotcut appimage [here](https://www.shotcut.org/download) and place it in the shotcut directory
