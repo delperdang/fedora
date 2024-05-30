@@ -104,6 +104,6 @@ sudo dnf install vlc -y
 
 # shotcut
 ```
-mkdir ~/shotcut
+mkdir ~/appimages
 ```
-download the shotcut appimage [here](https://www.shotcut.org/download) and place it in the shotcut directory
+download the shotcut appimage [here](https://www.shotcut.org/download) and place it in the apppimages directory
