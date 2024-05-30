@@ -107,3 +107,8 @@ sudo dnf install vlc -y
 mkdir ~/appimages
 ```
 download the shotcut appimage [here](https://www.shotcut.org/download) and place it in the apppimages directory
+
+# lutris
+```
+sudo dnf install lutris -y
+```
