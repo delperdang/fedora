@@ -43,15 +43,13 @@ sudo shutdown -r now
 ```
 add the following line to /etc/fstab and restart
 ```
-/dev/disk/by-id/wwn-0x50014ee26ad4bf44-part1 /mnt/Elements auto nosuid,nodev,nofail,x-gvfs-show 0 0
+/dev/disk/by-id/wwn-0x50014ee26ad4bf44-part1 /mnt/d auto nosuid,nodev,nofail,x-gvfs-show 0 0
 ```
 start all docker containers by startup script
 ```
-cd /mnt/Elements/code/bedrock
+cd /mnt/d/code/bedrock
 ./scripts/startup.sh
-cd /mnt/Elements/code/jellyfin
-./scripts/startup.sh
-cd /mnt/Elements/code/lexcredendi
+cd /mnt/d/code/jellyfin
 ./scripts/startup.sh
 ```
 
