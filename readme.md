@@ -115,3 +115,6 @@ download the shotcut appimage [here](https://www.shotcut.org/download) and place
 ```
 sudo dnf install lutris -y
 ```
+
+# minecraft
+download the minecraft pocket eddition appimage [here](https://github.com/minecraft-linux/appimage-builder/releases) and place it in the appimages directory
