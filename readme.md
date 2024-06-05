@@ -111,10 +111,8 @@ mkdir ~/appimages
 ```
 download the shotcut appimage [here](https://www.shotcut.org/download) and place it in the apppimages directory
 
-# lutris
-```
-sudo dnf install lutris -y
-```
-
 # minecraft
 download the minecraft pocket eddition appimage [here](https://github.com/minecraft-linux/appimage-builder/releases) and place it in the appimages directory
+
+# etcher
+download the balena etcher appimage [here](https://etcher.balena.io/#download-etcher) and place it in the appimages directory
