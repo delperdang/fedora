@@ -95,11 +95,6 @@ sudo dnf install winetricks -y
 sudo dnf install protontricks -y
 ```
 
-# lutris
-```
-sudo dnf install lutris -y
-```
-
 # vlc
 ```
 sudo dnf install libxcrypt-compat libcurl libcurl-devel mesa-libGLU -y
