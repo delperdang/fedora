@@ -97,11 +97,9 @@ sudo dnf install protontricks -y
 
 # vlc
 ```
-sudo dnf install libxcrypt-compat libcurl libcurl-devel mesa-libGLU -y
 sudo dnf update -y
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf groupupdate multimedia -y
 sudo dnf groupupdate sound-and-video -y
-sudo dnf install apr apr-util -y
 sudo dnf install vlc -y
 ```
 
