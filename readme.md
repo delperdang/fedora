@@ -61,6 +61,21 @@ sudo dnf check-update -y
 sudo dnf install code -y
 ```
 
+# vlc
+```
+sudo dnf update -y
+sudo dnf groupupdate multimedia -y
+sudo dnf groupupdate sound-and-video -y
+sudo dnf install vlc -y
+```
+
+# x11
+```
+sudo dnf install plasma-workspace-x11 kwin-x11 -y
+sudo shutdown -r now
+```
+in the bottom left of the login screen select x11
+
 # steam
 ```
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
@@ -88,14 +103,6 @@ sudo dnf install winetricks -y
 sudo dnf install protontricks -y
 ```
 
-# vlc
-```
-sudo dnf update -y
-sudo dnf groupupdate multimedia -y
-sudo dnf groupupdate sound-and-video -y
-sudo dnf install vlc -y
-```
-
 # shotcut
 ```
 mkdir ~/appimages
@@ -104,10 +111,3 @@ download the shotcut appimage [here](https://www.shotcut.org/download) and place
 
 # minecraft
 download the minecraft pocket eddition appimage [here](https://github.com/minecraft-linux/appimage-builder/releases) and place it in the appimages directory
-
-# x11
-```
-sudo dnf install plasma-workspace-x11 kwin-x11 -y
-sudo shutdown -r now
-```
-in the bottom left of the login screen select x11
