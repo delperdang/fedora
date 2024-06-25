@@ -14,13 +14,6 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
 sudo shutdown -r now
 ```
 
-# x11
-```
-sudo dnf install plasma-workspace-x11 kwin-x11 -y
-sudo shutdown -r now
-```
-in the bottom left of the login screen select x11
-
 # docker
 ```
 sudo dnf remove docker \
@@ -111,3 +104,10 @@ download the shotcut appimage [here](https://www.shotcut.org/download) and place
 
 # minecraft
 download the minecraft pocket eddition appimage [here](https://github.com/minecraft-linux/appimage-builder/releases) and place it in the appimages directory
+
+# x11
+```
+sudo dnf install plasma-workspace-x11 kwin-x11 -y
+sudo shutdown -r now
+```
+in the bottom left of the login screen select x11
