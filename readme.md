@@ -103,11 +103,8 @@ sudo dnf install winetricks -y
 sudo dnf install protontricks -y
 ```
 
-# shotcut
+# minecraft
 ```
 mkdir ~/appimages
 ```
-download the shotcut appimage [here](https://www.shotcut.org/download) and place it in the apppimages directory
-
-# minecraft
 download the minecraft pocket eddition appimage [here](https://github.com/minecraft-linux/appimage-builder/releases) and place it in the appimages directory
