@@ -102,9 +102,3 @@ install winetricks and protontricks
 sudo dnf install winetricks -y
 sudo dnf install protontricks -y
 ```
-
-# minecraft
-```
-mkdir ~/appimages
-```
-download the minecraft pocket eddition appimage [here](https://github.com/minecraft-linux/appimage-builder/releases) and place it in the appimages directory
