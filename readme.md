@@ -69,13 +69,6 @@ sudo dnf groupupdate sound-and-video -y
 sudo dnf install vlc -y
 ```
 
-# x11
-```
-sudo dnf install plasma-workspace-x11 kwin-x11 -y
-sudo shutdown -r now
-```
-in the bottom left of the login screen select x11
-
 # steam
 ```
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
