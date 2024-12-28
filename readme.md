@@ -16,19 +16,7 @@ sudo shutdown -r now
 
 # docker
 ```
-sudo dnf remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-selinux \
-                  docker-engine-selinux \
-                  docker-engine -y
-sudo dnf install dnf-plugins-core -y
-sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo -y
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y
+sudo dnf install moby-engine docker-cli containerd docker-buildx docker-compose docker-compose-switch -y
 sudo systemctl enable docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -40,8 +28,6 @@ add the following line to /etc/fstab and restart
 ```
 start all docker containers by startup script
 ```
-cd /mnt/d/code/bedrock
-./scripts/startup.sh
 cd /mnt/d/code/jellyfin
 ./scripts/startup.sh
 ```
