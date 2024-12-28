@@ -57,7 +57,6 @@ sudo dnf install vlc -y
 
 # steam
 ```
-sudo dnf config-manager --enable fedora-cisco-openh264 -y
 sudo dnf install steam -y
 ```
 download the latest release of proton ge [here](https://github.com/GloriousEggroll/proton-ge-custom/releases)
