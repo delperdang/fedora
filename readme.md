@@ -69,3 +69,8 @@ echo "export __GL_SHADER_DISK_CACHE_PATH=~/shaders" | sudo tee -a ~/.bashrc
 sudo dnf install winetricks -y
 sudo dnf install protontricks -y
 ```
+
+# discord
+```
+sudo dnf install discord -y
+```
