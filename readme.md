@@ -11,6 +11,7 @@ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-rele
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf makecache -y
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda -y
+sudo dnf install plasma-workspace-x11 kwin-x11 -y
 sudo shutdown -r now
 ```
 
