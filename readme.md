@@ -47,9 +47,10 @@ sudo dnf install code -y
 
 # vlc
 ```
-sudo dnf update -y
-sudo dnf groupupdate multimedia -y
-sudo dnf groupupdate sound-and-video -y
+sudo dnf upgrade -y
+sudo dnf group upgrade multimedia -y
+sudo dnf group upgrade sound-and-video -y
+sudo dnf install libavcodec-freeworld --allowerasing -y
 sudo dnf install vlc -y
 sudo shutdown -r now
 ```
