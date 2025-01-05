@@ -73,8 +73,3 @@ sudo dnf install protontricks -y
 sudo dnf install input-remapper -y
 sudo systemctl enable --now input-remapper
 ```
-
-# discord
-```
-sudo dnf install discord -y
-```
