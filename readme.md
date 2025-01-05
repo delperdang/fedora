@@ -70,6 +70,8 @@ echo "export __GL_SHADER_DISK_CACHE=1" | sudo tee -a ~/.bashrc
 echo "export __GL_SHADER_DISK_CACHE_PATH=~/shaders" | sudo tee -a ~/.bashrc
 sudo dnf install winetricks -y
 sudo dnf install protontricks -y
+sudo dnf install input-remapper -y
+sudo systemctl enable --now input-remapper
 ```
 
 # discord
