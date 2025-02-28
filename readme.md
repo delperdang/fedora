@@ -72,3 +72,11 @@ sudo dnf install protontricks -y
 sudo dnf install input-remapper -y
 sudo systemctl enable --now input-remapper
 ```
+
+# sunshine
+sudo dnf copr enable lizardbyte/stable -y
+sudo dnf install sunshine -y
+systemctl --user enable sunshine
+systemctl --user start sunshine
+sudo loginctl enable-linger $USER
+systemctl --user daemon-reexec
