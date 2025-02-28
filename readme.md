@@ -33,6 +33,7 @@ cd /mnt/d/code/jellyfin
 # chrome
 ```
 sudo dnf install fedora-workstation-repositories -y
+sudo dnf config-manager setopt google-chrome.enabled=1
 sudo dnf install google-chrome-stable -y
 ```
 
@@ -48,7 +49,6 @@ sudo dnf install code -y
 ```
 sudo dnf upgrade -y
 sudo dnf group upgrade multimedia -y
-sudo dnf group upgrade sound-and-video -y
 sudo dnf install libavcodec-freeworld --allowerasing -y
 sudo dnf install vlc -y
 sudo shutdown -r now
@@ -69,14 +69,20 @@ echo "export __GL_SHADER_DISK_CACHE=1" | sudo tee -a ~/.bashrc
 echo "export __GL_SHADER_DISK_CACHE_PATH=~/shaders" | sudo tee -a ~/.bashrc
 sudo dnf install winetricks -y
 sudo dnf install protontricks -y
+```
+
+# input remapper
+```
 sudo dnf install input-remapper -y
 sudo systemctl enable --now input-remapper
 ```
 
 # sunshine
+```
 sudo dnf copr enable lizardbyte/stable -y
 sudo dnf install sunshine -y
 systemctl --user enable sunshine
 systemctl --user start sunshine
 sudo loginctl enable-linger $USER
 systemctl --user daemon-reexec
+```
