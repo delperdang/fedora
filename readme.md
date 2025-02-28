@@ -21,6 +21,9 @@ sudo dnf install moby-engine docker-cli containerd docker-buildx docker-compose 
 sudo systemctl enable docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
+```
+add the external drive to fstab as "d"
+```
 echo "/dev/disk/by-id/wwn-0x50014ee26ad4bf44-part1 /mnt/d auto nosuid,nodev,nofail,x-gvfs-show 0 0" | sudo tee -a /etc/fstab
 sudo shutdown -r now
 ```
@@ -40,7 +43,7 @@ sudo dnf install google-chrome-stable -y
 # vscode
 ```
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf check-update -y
 sudo dnf install code -y
 ```
